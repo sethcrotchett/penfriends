@@ -3,6 +3,17 @@
 .ionic-logo {
   display: block;
   margin: 15px auto;
-  width: 80%;
-  height: 80%;
+  width: 90%;
+  height: 90%;
 }
+
+  .bar.bar-positive {
+    background-color: #3a679e;
+    border-color: #1c4475;
+    background-image: linear-gradient(0deg, #1c4475, #1c4475 50%, transparent 50%);
+    color: #fff; }
+    .bar.bar-positive .title {
+      color: #fff; }
+      
+      
+
