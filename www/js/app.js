@@ -24,6 +24,15 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     })
 
     // the pet tab has its own child nav-view and history
+    .state('tab.mailbox-index', {
+      url: '/mailbox',
+      views: {
+        'mailbox-tab': {
+          templateUrl: 'templates/mailbox-index.html',
+          controller: 'MailboxIndexCtrl'
+        }
+      }
+    })
     .state('tab.pet-index', {
       url: '/pets',
       views: {
