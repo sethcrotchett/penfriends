@@ -33,31 +33,42 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
         }
       }
     })
-    .state('tab.pet-index', {
-      url: '/pets',
+    
+    .state('tab.mailbox-detail', {
+      url: '/mailbox/:petId',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-index.html',
-          controller: 'PetIndexCtrl'
+        'mailbox-tab': {
+          templateUrl: 'templates/mailbox-detail.html',
+          controller: 'MailboxDetailCtrl'
+        }
+      }
+    })
+    
+    .state('tab.friends-index', {
+      url: '/friends',
+      views: {
+        'friends-tab': {
+          templateUrl: 'templates/friends-index.html',
+          controller: 'FriendIndexCtrl'
         }
       }
     })
 
-    .state('tab.pet-detail', {
-      url: '/pet/:petId',
+    .state('tab.friend-detail', {
+      url: '/friend/:petId',
       views: {
-        'pets-tab': {
-          templateUrl: 'templates/pet-detail.html',
-          controller: 'PetDetailCtrl'
+        'friends-tab': {
+          templateUrl: 'templates/friend-detail.html',
+          controller: 'FriendDetailCtrl'
         }
       }
     })
-
-    .state('tab.adopt', {
-      url: '/adopt',
+    
+    .state('tab.compose', {
+      url: '/compose',
       views: {
-        'adopt-tab': {
-          templateUrl: 'templates/adopt.html'
+        'compose-tab': {
+          templateUrl: 'templates/compose.html'
         }
       }
     })
@@ -72,7 +83,7 @@ angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/pets');
+  $urlRouterProvider.otherwise('/tab/mailbox');
 
 });
 
