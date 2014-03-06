@@ -8,9 +8,10 @@
 
     <ion-list>
 
-      <ion-item ng-repeat="pet in pets" type="item-text-wrap" href="#/tab/mailbox/{{pet.id}}">
-        <h3>{{pet.title}}</h3>
-        <p>{{pet.description}}</p>
+      <ion-item class="item-avatar" ng-repeat="message in messages" type="item-text-wrap" href="#/tab/mailbox/{{message.msg_id}}">
+        <img src="./img/avatar.png">
+        <h2>{{message.text}}</h2>
+        <p>{{message.from_id}}</p>
       </ion-item>
       
     </ion-list>

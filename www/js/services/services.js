@@ -23,4 +23,29 @@ angular.module('starter.services', [])
       return pets[petId];
     }
   }
+})
+
+/**
+ * A simple example service that returns some data.
+ */
+.factory('MessageService', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var messages = [
+    { msg_id: 0, from_id: 1, date_sent: '03/05/2014', thread_id: 0, father: 0, text: 'Hey, looking for new pen friends' },
+    { msg_id: 1, from_id: 1, date_sent: '03/05/2014', thread_id: 0, father: 0, text: 'Looking for a friend' },
+    { msg_id: 2, from_id: 2, date_sent: '03/05/2014', thread_id: 0, father: 0, text: 'Im 30 male, looking for pen friends' },
+    { msg_id: 3, from_id: 3, date_sent: '03/05/2014', thread_id: 0, father: 0, text: 'Im a student in China, looking for other students ' }
+  ];
+
+  return {
+    all: function() {
+      return messages;
+    },
+    get: function(messageId) {
+      // Simple index lookup
+      return messages[messagelId];
+    }
+  }
 });

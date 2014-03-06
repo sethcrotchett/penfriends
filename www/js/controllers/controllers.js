@@ -8,9 +8,9 @@ angular.module('starter.controllers', [])
 })
 
 // A simple controller that fetches a list of data from a service
-.controller('MailboxIndexCtrl', function($scope, PetService) {
+.controller('MailboxIndexCtrl', function($scope, MessageService) {
   // "Pets" is a service returning mock data (services.js)
-  $scope.pets = PetService.all();
+  $scope.messages = MessageService.all();
 })
 
 
